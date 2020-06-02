@@ -12,3 +12,9 @@ print(a)
 print(b)
 print(id(a))
 print(id(b))
+#交换两个数的第二种方式
+a=100
+b=200
+a,b=b,a
+print(a)
+print(b)
