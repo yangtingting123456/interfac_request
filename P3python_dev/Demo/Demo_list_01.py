@@ -1,6 +1,11 @@
 #列表
-#列表定义list=[]
+#1.列表定义list=[]
 stus=['张三','李四','王二','麻子']
+stus1=['a','b','c']
 print(stus)
 print(stus[0])
 print(stus[-1])
+print(stus[1:3])
+print(stus[2:])
+print(stus*2)
+print(stus+stus1)
