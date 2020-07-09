@@ -1,5 +1,6 @@
 import os
 import xlrd
+#读取excel中的内容，将内容放到列表中打印出来
 current_path=os.path.dirname(__file__)        #获取当前工作路径的工作路径
 excel_path=os.path.join(current_path,'..//data//userinfo.xlsx')   #获取用户信息excel的路径
 workbook=xlrd.open_workbook(excel_path)       #打开一个工作簿
