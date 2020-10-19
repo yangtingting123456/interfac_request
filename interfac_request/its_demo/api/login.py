@@ -1,30 +1,36 @@
 import requests
-from itsDemoTest.comm.ReadConfig import config
-from itsDemoTest.comm.md5_password import psd
+from its_demo.comm.url_info import urlinfo
+import jsonpath
+from its_demo.comm.md5_password import get_md5_password
 import unittest
+import re
+
+# 登录接口，获取用户登录的token
+md5_password = get_md5_password()
 
 class Login_info(unittest.TestCase):
     def setUp(self) -> None:
         pass
     def tearDown(self) -> None:
         pass
-    def test_Login(self):
+    def test_gettoken(self):
         post_params = {
             "name": "admin",
-            "password": "0659c7992e268962384eb17fafe88364"
+            "password": md5_password
         }
         header_param = {
             "Content-Type": "application/json"
         }
 
-        response = requests.post(url='http://dev.its.juneyaokc.com:8081/user/login',
+        response = requests.post(url='%s/user/login' % urlinfo.url_hostname_info(),
                                  json=post_params,
                                  headers=header_param
                                  )
         body = response.json()
         code = body['code']
         user_token=body['data']['token']
-        self.assertEqual(code,200,'登录失败')
+
+        return user_token
 
 if __name__ == '__main__':
     unittest.main(verbosity=2)
