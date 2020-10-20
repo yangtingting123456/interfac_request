@@ -1,0 +1,6 @@
+2020-10-18 11:58:01 - newdream - "/Users/liuqingjun/PycharmProjects/P3P4_API_LineTestFrame/samples/demo_04.py:11" - <module> - DEBUG - P1
+2020-10-18 11:58:01 - newdream - "/Users/liuqingjun/PycharmProjects/P3P4_API_LineTestFrame/samples/demo_04.py:12" - <module> - INFO - P2
+2020-10-18 11:58:01 - newdream - "/Users/liuqingjun/PycharmProjects/P3P4_API_LineTestFrame/samples/demo_04.py:13" - <module> - WARNING - P3
+2020-10-18 11:58:01 - newdream - "/Users/liuqingjun/PycharmProjects/P3P4_API_LineTestFrame/samples/demo_04.py:14" - <module> - ERROR - P4
+2020-10-18 11:58:01 - newdream - "/Users/liuqingjun/PycharmProjects/P3P4_API_LineTestFrame/samples/demo_04.py:15" - <module> - CRITICAL - P5
+

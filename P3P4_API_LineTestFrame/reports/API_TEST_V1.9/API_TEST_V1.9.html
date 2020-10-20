@@ -2,7 +2,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title>工时2.0接口测试报告</title>
+    <title>微信公众平台接口测试报告</title>
     <meta name="generator" content="HTMLTestRunner 1.2.0"/>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <link href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
@@ -233,14 +233,14 @@ table       { font-size: 100%; }
                 innerSize: '80%',
                 name: '比例',
                 data: [
-                    ['通过', 9],
+                    ['通过', 0],
                     {
                         name: '失败',
                         y: 0,
                         sliced: true,
                         selected: true
                     },
-                    ['错误', 0]
+                    ['错误', 5]
                 ]
             }]
         }, function(c) {
@@ -373,13 +373,13 @@ function html_escape(s) {
 <div class='pic_looper'></div> <div class='pic_show'><div class='pic_box'><img src=''/></div> </div>
 <div class='heading'>
 <div style="width: 650px; float: left;">
-    <h1 style="font-family: Microsoft YaHei">工时2.0接口测试报告</h1>
+    <h1 style="font-family: Microsoft YaHei">微信公众平台接口测试报告</h1>
     <p class='attribute'><strong>测试人员 : </strong> P3P4</p>
-<p class='attribute'><strong>开始时间 : </strong> 2020-10-19 17:22:41</p>
-<p class='attribute'><strong>合计耗时 : </strong> 0:00:00.711047</p>
-<p class='attribute'><strong>测试结果 : </strong> 共 9，通过 9，通过率 = 100.00%</p>
+<p class='attribute'><strong>开始时间 : </strong> 2020-10-18 11:29:05</p>
+<p class='attribute'><strong>合计耗时 : </strong> 0:00:00.127793</p>
+<p class='attribute'><strong>测试结果 : </strong> 共 5，错误 5，通过率 = 0.00%</p>
 <p class='attribute'><strong>失败用例合集 : </strong> <ol style='float: left;'>无</ol></p>
-<p class='attribute'><strong>错误用例合集 : </strong> <ol style='float: left;'>无</ol></p>
+<p class='attribute'><strong>错误用例合集 : </strong> <div class='panel-default' style='float: left;'><a class='showDetail' data-toggle='collapse' href='#errorCaseOl' style='text-decoration: none;'>点击查看</a></div><ol id='errorCaseOl' class='collapse' style='float: left;'><li>case02 (begin_dev.test_get_access_token_api_case.TestGetaccesstokenApiCase)</li><li>case03 (begin_dev.test_get_access_token_api_case.TestGetaccesstokenApiCase)</li><li>case01 (begin_dev.test_get_access_token_api_case.TestGetaccesstokenApiCase)</li><li>case04 (user_manager.user_tag_manager.test_create_tag_api_case.TestCreatetagApiCase)</li><li>case05 (user_manager.user_tag_manager.test_delete_tag_api_case.TestDeletetagApiCase)</li></ol></p>
 
     <p class='description'>接口框架测试实战使用</p>
 </div>
@@ -390,11 +390,11 @@ function html_escape(s) {
 
 <div style="width: 500px; clear: both;">
 <p id='show_detail_line'>
-<a class="btn btn-primary" href='javascript:showCase(0)'>概要{ 100.00% }</a>
-<a class="btn btn-success" href='javascript:showCase(2)'>通过{ 9 }</a>
+<a class="btn btn-primary" href='javascript:showCase(0)'>概要{ 0.00% }</a>
+<a class="btn btn-success" href='javascript:showCase(2)'>通过{ 0 }</a>
 <a class="btn btn-danger" href='javascript:showCase(1)'>失败{ 0 }</a>
-<a class="btn btn-warning" href='javascript:showCase(3)'>错误{ 0 }</a>
-<a class="btn btn-info" href='javascript:showCase(4)'>所有{ 9 }</a>
+<a class="btn btn-warning" href='javascript:showCase(3)'>错误{ 5 }</a>
+<a class="btn btn-info" href='javascript:showCase(4)'>所有{ 5 }</a>
 </p>
 </div>
 <table id='result_table' class="table table-condensed table-bordered table-hover">
@@ -419,121 +419,219 @@ function html_escape(s) {
     <td>详细</td>
 </tr>
 
-<tr class='passClass warning'>
-    <td>Login_InfoCase</td>
+<tr class='errorClass warning'>
+    <td>TestGetaccesstokenApiCase</td>
     <td></td>
     <td class="text-center">3</td>
+    <td class="text-center">0</td>
+    <td class="text-center">0</td>
     <td class="text-center">3</td>
-    <td class="text-center">0</td>
-    <td class="text-center">0</td>
-    <td class="text-center">0.13秒</td>
+    <td class="text-center">0.09秒</td>
     <td class="text-center"><a href="javascript:showClassDetail('c1',3)" class="detail" id='c1'>详细</a></td>
 </tr>
 
-<tr id='pt1_1' class='hiddenRow'>
-    <td class='passCase' style="vertical-align: middle"><div class='testcase'>test_Login_Fail01</div></td>
-    <td style="vertical-align: left"></td>
-    <td colspan='5' align='center'><span class="label label-success success">通过</span></td>
-    <td class='passCase' style="vertical-align: middle"></td>
-</tr>
+    <tr id='et1_1' class='none'>
+        <td class='errorCase' style="vertical-align: middle"><div class='testcase'>case02</div></td>
+        <td style="vertical-align: middle">验证appid错误时，get_access_token接口能否正常处理</td>
+        <td colspan='5' align='center'>
+        <!--默认收起错误信息 -Findyou
+        <button id='btn_et1_1' type="button"  class="btn btn-xs collapsed" data-toggle="collapse" data-target='#div_et1_1'>错误</button>
+        <div id='div_et1_1' class="collapse">  -->
 
-<tr id='pt1_2' class='hiddenRow'>
-    <td class='passCase' style="vertical-align: middle"><div class='testcase'>test_Login_Fail02</div></td>
-    <td style="vertical-align: left"></td>
-    <td colspan='5' align='center'><span class="label label-success success">通过</span></td>
-    <td class='passCase' style="vertical-align: middle"></td>
-</tr>
+        <!-- 默认展开错误信息 -Findyou /  修复失败按钮的颜色 -- Gelomen -->
+        <button id='btn_et1_1' type="button"  class="btn btn-xs" data-toggle="collapse" data-target='#div_et1_1'>错误</button>
+        <div id='div_et1_1' class="collapse in">
+        <pre style="text-align:left">
+        
+et1_1: Traceback (most recent call last):
+  File "/Users/liuqingjun/PycharmProjects/P3P4_API_LineTestFrame/testcases/begin_dev/test_get_access_token_api_case.py", line 36, in test_get_accesstoken_error_appid
+    actual_result = response.json()['errcode']
+AttributeError: 'NoneType' object has no attribute 'json'
 
-<tr id='pt1_3' class='hiddenRow'>
-    <td class='passCase' style="vertical-align: middle"><div class='testcase'>test_Login_Success</div></td>
-    <td style="vertical-align: left"></td>
-    <td colspan='5' align='center'><span class="label label-success success">通过</span></td>
-    <td class='passCase' style="vertical-align: middle"></td>
-</tr>
 
-<tr class='passClass warning'>
-    <td>UserListCase</td>
+        </pre>
+        </div>
+        </td>
+        <td class='errorCase' style="vertical-align: middle"></td>
+    </tr>
+    
+    <tr id='et1_2' class='none'>
+        <td class='errorCase' style="vertical-align: middle"><div class='testcase'>case03</div></td>
+        <td style="vertical-align: middle">验证appsecret错误时，get_access_token接口能否正常处理</td>
+        <td colspan='5' align='center'>
+        <!--默认收起错误信息 -Findyou
+        <button id='btn_et1_2' type="button"  class="btn btn-xs collapsed" data-toggle="collapse" data-target='#div_et1_2'>错误</button>
+        <div id='div_et1_2' class="collapse">  -->
+
+        <!-- 默认展开错误信息 -Findyou /  修复失败按钮的颜色 -- Gelomen -->
+        <button id='btn_et1_2' type="button"  class="btn btn-xs" data-toggle="collapse" data-target='#div_et1_2'>错误</button>
+        <div id='div_et1_2' class="collapse in">
+        <pre style="text-align:left">
+        
+et1_2: Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/urllib3/connection.py", line 160, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/urllib3/util/connection.py", line 61, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 8] nodename nor servname provided, or not known
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/urllib3/connectionpool.py", line 677, in urlopen
+    chunked=chunked,
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/urllib3/connectionpool.py", line 381, in _make_request
+    self._validate_conn(conn)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/urllib3/connectionpool.py", line 978, in _validate_conn
+    conn.connect()
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/urllib3/connection.py", line 309, in connect
+    conn = self._new_conn()
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/urllib3/connection.py", line 172, in _new_conn
+    self, "Failed to establish a new connection: %s" % e
+urllib3.exceptions.NewConnectionError: &lt;urllib3.connection.HTTPSConnection object at 0x7fe3a0ac1a50&gt;: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/requests/adapters.py", line 449, in send
+    timeout=timeout
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/urllib3/connectionpool.py", line 727, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/urllib3/util/retry.py", line 439, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.weixin.qq', port=443): Max retries exceeded with url: /cgi-bin/token?grant_type=client_credential&amp;appid=wx55614004f367f8ca&amp;secret=65515b46dd758dfdb09420bb7db2c6 (Caused by NewConnectionError('&lt;urllib3.connection.HTTPSConnection object at 0x7fe3a0ac1a50&gt;: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/liuqingjun/PycharmProjects/P3P4_API_LineTestFrame/testcases/begin_dev/test_get_access_token_api_case.py", line 48, in test_get_accesstoken_error_appsecret
+    params=get_param_dict)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/requests/sessions.py", line 543, in get
+    return self.request('GET', url, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/requests/sessions.py", line 530, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/requests/sessions.py", line 643, in send
+    r = adapter.send(request, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='api.weixin.qq', port=443): Max retries exceeded with url: /cgi-bin/token?grant_type=client_credential&amp;appid=wx55614004f367f8ca&amp;secret=65515b46dd758dfdb09420bb7db2c6 (Caused by NewConnectionError('&lt;urllib3.connection.HTTPSConnection object at 0x7fe3a0ac1a50&gt;: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+
+
+        </pre>
+        </div>
+        </td>
+        <td class='errorCase' style="vertical-align: middle"></td>
+    </tr>
+    
+    <tr id='et1_3' class='none'>
+        <td class='errorCase' style="vertical-align: middle"><div class='testcase'>case01</div></td>
+        <td style="vertical-align: middle">验证get_access_token接口能否成功调用</td>
+        <td colspan='5' align='center'>
+        <!--默认收起错误信息 -Findyou
+        <button id='btn_et1_3' type="button"  class="btn btn-xs collapsed" data-toggle="collapse" data-target='#div_et1_3'>错误</button>
+        <div id='div_et1_3' class="collapse">  -->
+
+        <!-- 默认展开错误信息 -Findyou /  修复失败按钮的颜色 -- Gelomen -->
+        <button id='btn_et1_3' type="button"  class="btn btn-xs" data-toggle="collapse" data-target='#div_et1_3'>错误</button>
+        <div id='div_et1_3' class="collapse in">
+        <pre style="text-align:left">
+        
+et1_3: Traceback (most recent call last):
+  File "/Users/liuqingjun/PycharmProjects/P3P4_API_LineTestFrame/testcases/begin_dev/test_get_access_token_api_case.py", line 25, in test_get_accesstoken_success
+    actual_result = response.status_code
+AttributeError: 'NoneType' object has no attribute 'status_code'
+
+
+        </pre>
+        </div>
+        </td>
+        <td class='errorCase' style="vertical-align: middle"></td>
+    </tr>
+    
+<tr class='errorClass warning'>
+    <td>TestCreatetagApiCase</td>
     <td></td>
-    <td class="text-center">2</td>
-    <td class="text-center">2</td>
+    <td class="text-center">1</td>
     <td class="text-center">0</td>
     <td class="text-center">0</td>
-    <td class="text-center">0.15秒</td>
-    <td class="text-center"><a href="javascript:showClassDetail('c2',2)" class="detail" id='c2'>详细</a></td>
+    <td class="text-center">1</td>
+    <td class="text-center">0.01秒</td>
+    <td class="text-center"><a href="javascript:showClassDetail('c2',1)" class="detail" id='c2'>详细</a></td>
 </tr>
 
-<tr id='pt2_1' class='hiddenRow'>
-    <td class='passCase' style="vertical-align: middle"><div class='testcase'>test_user_list</div></td>
-    <td style="vertical-align: left"></td>
-    <td colspan='5' align='center'><span class="label label-success success">通过</span></td>
-    <td class='passCase' style="vertical-align: middle"></td>
-</tr>
+    <tr id='et2_1' class='none'>
+        <td class='errorCase' style="vertical-align: middle"><div class='testcase'>case04</div></td>
+        <td style="vertical-align: middle">验证create_tag接口能否成功调用</td>
+        <td colspan='5' align='center'>
+        <!--默认收起错误信息 -Findyou
+        <button id='btn_et2_1' type="button"  class="btn btn-xs collapsed" data-toggle="collapse" data-target='#div_et2_1'>错误</button>
+        <div id='div_et2_1' class="collapse">  -->
 
-<tr id='pt2_2' class='hiddenRow'>
-    <td class='passCase' style="vertical-align: middle"><div class='testcase'>test_user_list_fail</div></td>
-    <td style="vertical-align: left"></td>
-    <td colspan='5' align='center'><span class="label label-success success">通过</span></td>
-    <td class='passCase' style="vertical-align: middle"></td>
-</tr>
+        <!-- 默认展开错误信息 -Findyou /  修复失败按钮的颜色 -- Gelomen -->
+        <button id='btn_et2_1' type="button"  class="btn btn-xs" data-toggle="collapse" data-target='#div_et2_1'>错误</button>
+        <div id='div_et2_1' class="collapse in">
+        <pre style="text-align:left">
+        
+et2_1: Traceback (most recent call last):
+  File "/Users/liuqingjun/PycharmProjects/P3P4_API_LineTestFrame/testcases/user_manager/user_tag_manager/test_create_tag_api_case.py", line 23, in test_create_tag
+    token_id = api_info.get_access_token_value(self.session,self.HOSTS)
+  File "/Users/liuqingjun/PycharmProjects/P3P4_API_LineTestFrame/common/api_info.py", line 31, in get_access_token_value
+    return response.json()['access_token']
+AttributeError: 'NoneType' object has no attribute 'json'
 
-<tr class='passClass warning'>
-    <td>UserMessageListCase</td>
+
+        </pre>
+        </div>
+        </td>
+        <td class='errorCase' style="vertical-align: middle"></td>
+    </tr>
+    
+<tr class='errorClass warning'>
+    <td>TestDeletetagApiCase</td>
     <td></td>
-    <td class="text-center">2</td>
-    <td class="text-center">2</td>
+    <td class="text-center">1</td>
     <td class="text-center">0</td>
     <td class="text-center">0</td>
-    <td class="text-center">0.23秒</td>
-    <td class="text-center"><a href="javascript:showClassDetail('c3',2)" class="detail" id='c3'>详细</a></td>
+    <td class="text-center">1</td>
+    <td class="text-center">0.01秒</td>
+    <td class="text-center"><a href="javascript:showClassDetail('c3',1)" class="detail" id='c3'>详细</a></td>
 </tr>
 
-<tr id='pt3_1' class='hiddenRow'>
-    <td class='passCase' style="vertical-align: middle"><div class='testcase'>test_user_message_list</div></td>
-    <td style="vertical-align: left"></td>
-    <td colspan='5' align='center'><span class="label label-success success">通过</span></td>
-    <td class='passCase' style="vertical-align: middle"></td>
-</tr>
+    <tr id='et3_1' class='none'>
+        <td class='errorCase' style="vertical-align: middle"><div class='testcase'>case05</div></td>
+        <td style="vertical-align: middle">验证delete_tag接口能否成功调用</td>
+        <td colspan='5' align='center'>
+        <!--默认收起错误信息 -Findyou
+        <button id='btn_et3_1' type="button"  class="btn btn-xs collapsed" data-toggle="collapse" data-target='#div_et3_1'>错误</button>
+        <div id='div_et3_1' class="collapse">  -->
 
-<tr id='pt3_2' class='hiddenRow'>
-    <td class='passCase' style="vertical-align: middle"><div class='testcase'>test_user_message_list_fail</div></td>
-    <td style="vertical-align: left"></td>
-    <td colspan='5' align='center'><span class="label label-success success">通过</span></td>
-    <td class='passCase' style="vertical-align: middle"></td>
-</tr>
+        <!-- 默认展开错误信息 -Findyou /  修复失败按钮的颜色 -- Gelomen -->
+        <button id='btn_et3_1' type="button"  class="btn btn-xs" data-toggle="collapse" data-target='#div_et3_1'>错误</button>
+        <div id='div_et3_1' class="collapse in">
+        <pre style="text-align:left">
+        
+et3_1: Traceback (most recent call last):
+  File "/Users/liuqingjun/PycharmProjects/P3P4_API_LineTestFrame/testcases/user_manager/user_tag_manager/test_delete_tag_api_case.py", line 26, in test_delete_tag
+    token_id = response.json()['access_token']
+AttributeError: 'NoneType' object has no attribute 'json'
 
-<tr class='passClass warning'>
-    <td>UserUpateCase</td>
-    <td></td>
-    <td class="text-center">2</td>
-    <td class="text-center">2</td>
-    <td class="text-center">0</td>
-    <td class="text-center">0</td>
-    <td class="text-center">0.2秒</td>
-    <td class="text-center"><a href="javascript:showClassDetail('c4',2)" class="detail" id='c4'>详细</a></td>
-</tr>
 
-<tr id='pt4_1' class='hiddenRow'>
-    <td class='passCase' style="vertical-align: middle"><div class='testcase'>test_user_update</div></td>
-    <td style="vertical-align: left"></td>
-    <td colspan='5' align='center'><span class="label label-success success">通过</span></td>
-    <td class='passCase' style="vertical-align: middle"></td>
-</tr>
-
-<tr id='pt4_2' class='hiddenRow'>
-    <td class='passCase' style="vertical-align: middle"><div class='testcase'>test_user_update_fail</div></td>
-    <td style="vertical-align: left"></td>
-    <td colspan='5' align='center'><span class="label label-success success">通过</span></td>
-    <td class='passCase' style="vertical-align: middle"></td>
-</tr>
-
+        </pre>
+        </div>
+        </td>
+        <td class='errorCase' style="vertical-align: middle"></td>
+    </tr>
+    
 <tr id='total_row' class="text-center active">
     <td colspan='2'>总计</td>
-    <td>9</td>
-    <td>9</td>
+    <td>5</td>
     <td>0</td>
     <td>0</td>
-    <td>0.71秒</td>
-    <td>通过率：100.00%</td>
+    <td>5</td>
+    <td>0.11秒</td>
+    <td>通过率：0.00%</td>
 </tr>
 </table>
 
