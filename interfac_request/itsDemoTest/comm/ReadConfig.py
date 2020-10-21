@@ -37,8 +37,28 @@ class ConfigUtils:
         port_value = self.cfg.get('user_info', 'pageSize')
         return port_value
 
+    @property
+    def LOG_PATH(self):
+        log_path_value = self.cfg.get('default', 'LOG_PATH')
+        return log_path_value
+
+    @property
+    def LOG_LEVEL(self):
+        log_level_value = int(self.cfg.get('default', 'LOG_LEVEL'))
+        return log_level_value
+
+    @property
+    def SMTP_RECEIVER(self):
+        smtp_receiver_value = self.cfg.get('default', 'SMTP_RECEIVER')
+        return smtp_receiver_value
+
+    @property
+    def REPORT_PAHT(self):
+        report_paht_value = self.cfg.get('default', 'REPORT_PATH')
+        return report_paht_value
 
 config = ConfigUtils()
+
 
 
 

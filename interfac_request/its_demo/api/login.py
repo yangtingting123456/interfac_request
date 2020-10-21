@@ -8,11 +8,8 @@ import re
 # 登录接口，获取用户登录的token
 md5_password = get_md5_password()
 
-class Login_info(unittest.TestCase):
-    def setUp(self) -> None:
-        pass
-    def tearDown(self) -> None:
-        pass
+class Login_info():
+
     def test_gettoken(self):
         post_params = {
             "name": "admin",
@@ -32,8 +29,8 @@ class Login_info(unittest.TestCase):
 
         return user_token
 
-if __name__ == '__main__':
-    unittest.main(verbosity=2)
+LoginInfo=Login_info()
+
 
 
 

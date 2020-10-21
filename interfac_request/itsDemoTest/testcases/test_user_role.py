@@ -5,7 +5,7 @@ import unittest
 from itsDemoTest.comm.apiutils import API_Info
 from itsDemoTest.comm.log_utils import logger
 
-class UserListCase(unittest.TestCase):
+class UserRoleCase(unittest.TestCase):
     def setUp(self) -> None:
         self.session = requests.session()
         self.HOST = config.GET_HOSTS
@@ -17,25 +17,25 @@ class UserListCase(unittest.TestCase):
 
     def tearDown(self):
         self.session.close()
-    #成功获取用户列表
-    def test_user_list(self):
+    #成功获取某个角色下的用户
+    def test_user_role(self):
         ses_login = API_Info.Login_Api_Info(self.session,self.HOST,self.PORT,self.UserName,self.pwd)
         json_login_data = ses_login.json()
         token = json_login_data['data']['token']
-        ses_user_list = API_Info.User_list_api(self.session,self.HOST,self.PORT,token,self.PageNum,self.PageSize)
+        ses_user_list = API_Info.user_role_pai(self.session,self.HOST,self.PORT,token)
         json_userlist_data = ses_user_list.json()
         code = json_userlist_data['code']
-        self.assertEqual(code,200,'获取用户列表失败')
-    # token值错误
-    def test_user_list_fail(self):
-        ses_login = API_Info.Login_Api_Info(self.session,self.HOST,self.PORT,self.UserName,self.pwd)
-        # json_login_data = ses_login.json()
-        # token = json_login_data['data']['token']
-        ses_user_list = API_Info.User_list_api(self.session,self.HOST,self.PORT,'aldjlf',self.PageNum,self.PageSize)
+        self.assertEqual(code,200,'用户某个角色下的用户失败')
+
+   # token错误，返回code1003
+    def test_user_role_fail(self):
+        ses_login = API_Info.Login_Api_Info(self.session, self.HOST, self.PORT, self.UserName, self.pwd)
+        json_login_data = ses_login.json()
+        token = json_login_data['data']['token']
+        ses_user_list = API_Info.user_role_pai(self.session, self.HOST, self.PORT, "token")
         json_userlist_data = ses_user_list.json()
         code = json_userlist_data['code']
-        self.assertEqual(code,1003,'token值错误，返回code1003')
+        self.assertEqual(code, 1003, 'token错误，返回code1003')
 
 if __name__ == '__main__':
-    unittest.main(verbosity=2)
-
+    unittest.main()

@@ -9,7 +9,7 @@ usertoken=Login_info()
 class User_list():
     def get_user_id(self):
         header_params = {
-            "token": usertoken.get_token()
+            "token": usertoken.test_gettoken()
         }
         response = requests.get(url='%s/user/info' % urlinfo.url_hostname_info(),
                                 headers=header_params
@@ -21,4 +21,5 @@ class User_list():
         return user_id[0]
 
 user_id = User_list()
+
 
